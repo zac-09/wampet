@@ -12,6 +12,7 @@ class VotingList extends Component {
     state = {
         election_address: Cookies.get('address'),
         election_name: '',
+        item: [],
         election_description: '',
         candidates: [],
         cand_name: '',
@@ -30,14 +31,18 @@ class VotingList extends Component {
                 election_name: summary[0],
                 election_description: summary[1]
             });            
-            const c = await election.methods.getNumOfCandidates.call();
+            let c = await election.methods.getNumOfCandidates.call();
+            c =  await c.call()
             if(c == 0)
                 alert("Register a candidate first!");
 
             let candidates = [];
             for(let i=0 ; i<c; i++) {
+              console.log("i: " + i);
                 candidates.push(await election.methods.getCandidate(i).call());
             }
+        // console.log("the candidates are", candidates);
+
         let i=-1;
         const items = candidates.map(candidate => {
             i++;
@@ -84,6 +89,7 @@ class VotingList extends Component {
       }
 
     renderTable = () => {
+      {console.log("this is the item: ",this.state.item)}
         return (<Card.Group items={this.state.item}/>)
     } 
 

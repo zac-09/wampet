@@ -188,8 +188,11 @@ class ContainerExampleContainer extends Component {
 		try {
 			this.setState({ loading: true });
 			const add = Cookies.get('address');
-			const election = Election(add);
+			console.log("the address is",add,this.state.election_name,this.state.election_name)
+			const election = Election("0x9C8D481f17b3cf9c8C11b516134FD4db1689223C");
+			console.log("the election is",election)
 			candidate = await election.methods.winnerCandidate().call();
+			console.log("the candidate is",candidate)
 			cand = await election.methods.getCandidate(candidate).call();
 			var http = new XMLHttpRequest();
 			var url = '/voter/resultMail';
@@ -219,7 +222,7 @@ class ContainerExampleContainer extends Component {
 			this.setState({ loading: true });
 			http.send(params);
 		} catch (err) {
-			console.log(err.message);
+			console.log("the error is",err.message);
 		}
 	};
 

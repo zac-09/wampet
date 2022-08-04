@@ -15,6 +15,7 @@ class VotingList extends Component {
         election_name: '',
         election_description: '',
         candidates: [],
+        item: [],
         cand_name: '',
         cand_desc: '',
         buffer: '',
@@ -60,7 +61,8 @@ class VotingList extends Component {
                 election_name: summary[0],
                 election_description: summary[1]
             });            
-            const c = await election.methods.getNumOfCandidates.call();
+            let c = await election.methods.getNumOfCandidates.call();
+            c = await c.call()
             
             let candidates = [];
             for(let i=0 ; i<c; i++) {
