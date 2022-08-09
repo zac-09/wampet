@@ -188,11 +188,22 @@ class ContainerExampleContainer extends Component {
 		try {
 			this.setState({ loading: true });
 			const add = Cookies.get('address');
-			console.log("the address is",add,this.state.election_name,this.state.election_name)
-			const election = Election("0x9C8D481f17b3cf9c8C11b516134FD4db1689223C");
-			console.log("the election is",election)
-			candidate = await election.methods.winnerCandidate().call();
-			console.log("the candidate is",candidate)
+			// console.log("the address is",add,this.state.election_name,this.state.election_name)
+			const election = Election(add);
+			// console.log("the election is",election)
+			const c =  this.state.candidates
+			let winner = {}
+			let largestVotes = 0;
+			for (let i = 0; i < c; i++) {
+				const tp = await election.methods.getCandidate(i).call();
+				console.log("the candiate is",tp)
+				if(largestVotes < tp[3]){
+					winner = tp;
+					largestVotes = tp[3]
+				}
+				graphVotes.push(tp[3]);
+			}
+			console.log("the candidate is",winner,"with votes",largestVotes)
 			cand = await election.methods.getCandidate(candidate).call();
 			var http = new XMLHttpRequest();
 			var url = '/voter/resultMail';
