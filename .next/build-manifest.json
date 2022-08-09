@@ -1,57 +1,29 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_b51ca49538b4e0dda20a.js"
+  ],
   "pages": {
     "/_app": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/company_login": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
-    ],
-    "/election/candidate_list": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/election/company_dashboard": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
-    ],
-    "/election/create_election": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
-    ],
-    "/election/vote": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
-    ],
-    "/election/voting_list": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/homepage": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/css/styles.52acd00f.chunk.css",
-      "static/chunks/styles.9d2aa3b0b49b2b42979b.js",
-      "static/runtime/main-784053d562a488a913b0.js"
-    ],
-    "/voter_login": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.d7d2f1f909a94661bd80.js",
-      "static/runtime/main-784053d562a488a913b0.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ]
   }
 }
