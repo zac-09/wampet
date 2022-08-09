@@ -35,7 +35,12 @@ module.exports = {
             if (err) 
                 cb(err);
             else {
-                if(bcrypt.compareSync(req.body.password, CompanyInfo.password) && CompanyInfo.email == req.body.email) {
+                console.log("the company info is",CompanyInfo)
+                console.log("the body info is",req.body)
+                if(!CompanyInfo){
+                    res.json({status: "error", message: "Company not found", data:null});
+                }
+                if(CompanyInfo && bcrypt.compareSync(req.body.password, CompanyInfo.password) && CompanyInfo.email == req.body.email) {
                     
                     res.json({status:"success", message: "company found!!!", data:{id: CompanyInfo._id, email: CompanyInfo.email}});
                 }
