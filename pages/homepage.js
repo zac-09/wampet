@@ -22,7 +22,7 @@ const HomepageHeading = ({ mobile }) => (
 	<Container text className="cont">
 		<Header
 			as="h1"
-			content="A blockchain based voting system for Makerere University"
+			content="A blockchain Based Voting System For Makerere University"
 			inverted
 			style={{
 				fontSize: mobile ? '2em' : '3em',
@@ -150,7 +150,7 @@ const HomepageLayout = () => (
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
 							The most secure way to<br />
-							cast your vote with maxim anonymity.
+							cast your vote with maximum anonymity.
 						</p>
 						<Header as="h3" style={{ fontSize: '2em' }}>
 							Transparency
