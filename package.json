@@ -35,6 +35,8 @@
   },
   "scripts": {
     "test": "mocha",
+    "build": "next build",
+        "heroku-postbuild": "npm run build",
     "start": "node server.js"
   },
   "keywords": [],
