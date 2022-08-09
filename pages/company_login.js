@@ -165,7 +165,7 @@ class DividerExampleVerticalForm extends Component {
 
                       <Button
                         onClick={this.signin}
-                        color="blue"
+                        color="green"
                         fluid
                         size="large"
                         style={{ marginBottom: 15 }}
@@ -210,7 +210,7 @@ class DividerExampleVerticalForm extends Component {
                       />
                       <Button
                         onClick={this.signup}
-                        color="blue"
+                        color="green"
                         fluid
                         size="large"
                         style={{ marginBottom: 15 }}
