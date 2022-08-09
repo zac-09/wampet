@@ -212,7 +212,7 @@ class VotingList extends Component {
       <div>
           <Helmet>
             <title>Candidate list!</title>
-            <link rel="shortcut icon" type="image/x-icon" href="../../static/logo3.png" />
+            <link rel="shortcut icon" type="image/x-icon" href="../../static/mak100.png" />
           </Helmet>
         <Grid>
           <Grid.Row>
