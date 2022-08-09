@@ -205,7 +205,7 @@ class DividerExampleVerticalForm extends Component {
                         id="signup_repeat_password"
                         icon="lock"
                         iconPosition="left"
-                        placeholder="Repeat Password"
+                        placeholder="Confirm Password"
                         type="password"
                       />
                       <Button

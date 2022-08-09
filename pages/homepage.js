@@ -146,17 +146,17 @@ const HomepageLayout = () => (
 				<Grid.Row textAlign="center">
 					<Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
 						<Header as="h3" style={{ fontSize: '2em' }}>
-							Private
-						</Header>
-						<p style={{ fontSize: '1.33em' }}>
-							Doesn't give any information <br />
-							regarding personal data.
-						</p>
-						<Header as="h3" style={{ fontSize: '2em' }}>
 							Secure
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
-							Not even a single chance of shutting <br /> down of the system.
+							The most secure way to<br />
+							cast your vote with maxim anonymity.
+						</p>
+						<Header as="h3" style={{ fontSize: '2em' }}>
+							Transparency
+						</Header>
+						<p style={{ fontSize: '1.33em' }}>
+						 Trust in an election begins and ends<br /> with transparency. 
 						</p>
 					</Grid.Column>
 					<Image src="../static/ether2.png" width="216" height="256" style={{ paddingTop: '50px' }} />
