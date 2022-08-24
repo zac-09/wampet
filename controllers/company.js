@@ -45,7 +45,7 @@ module.exports = {
                     res.json({status:"success", message: "Admin found!!!", data:{id: CompanyInfo._id, email: CompanyInfo.email}});
                 }
                 else {
-                    res.json({status:"error", message: "Invalid email/password!!!", data:null});
+                    return res.json({status:"error", message: "Invalid email/password!!!", data:null});
                 }
             }
         });

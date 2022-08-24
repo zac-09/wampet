@@ -115,13 +115,18 @@ class VotingList extends Component {
         const accounts = await web3.eth.getAccounts();
         
         try {
-        await ipfs.add(this.state.buffer, (err, ipfsHash) => {
-            this.setState({ ipfsHash: ipfsHash[0].hash });
+      // const harsh = await ipfs.add(this.state.buffer);
+      // console.log("harsh is",harsh);
+      
+      
+      await ipfs.add(this.state.buffer, (err, ipfsHash) => {
+          console.log("ip[sharsh",this.state.buffer);
+            // this.setState({ ipfsHash: ipfsHash[0].hash });
                     
             const add = Cookies.get('address');
             const election = Election(add);
 
-            election.methods.addCandidate(this.state.cand_name,this.state.cand_desc,this.state.ipfsHash,document.getElementById('email').value).send({
+            election.methods.addCandidate(this.state.cand_name,this.state.cand_desc,"this.state.ipfsHash",document.getElementById('email').value).send({
                 from: accounts[0]}, (error, transactionHash) => {}
             );       
         })
