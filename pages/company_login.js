@@ -69,6 +69,7 @@ class DividerExampleVerticalForm extends Component {
       var http = new XMLHttpRequest();
       var url = "company/authenticate";
       var params = "email=" + email + "&password=" + password;
+      let isAuthenticated = false;
       http.open("POST", url, true);
       //Send the proper header information along with the request
       http.setRequestHeader(
@@ -82,14 +83,19 @@ class DividerExampleVerticalForm extends Component {
 		  if(responseObj.status=="success") {
             Cookies.set('company_id', encodeURI(responseObj.data.id));
             Cookies.set('company_email', encodeURI(responseObj.data.email)); 
+            isAuthenticated = true;
 		  }
 		  else {
 			alert(responseObj.message);
+      return;
 		  }
           
         }
       };
       http.send(params); 
+      if(!isAuthenticated) {
+        return;
+      }
       try {
         const accounts = await web3.eth.getAccounts();
         console.log(accounts[0]);
