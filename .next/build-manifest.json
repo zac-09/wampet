@@ -14,10 +14,6 @@
     "/company_login": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/election/candidate_list": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
