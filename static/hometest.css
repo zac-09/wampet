@@ -3,10 +3,14 @@
 /*     background-image: url("bg2.png");    
  */
  background-color: #23A74C;
-  background: url('/static/mainBuilding.jpg') no-repeat;
-/*  background-size:cover; */
- background-origin: inherit;
-
+  background: url('/static/mak4.jpg') no-repeat;
+  background-size:cover;
+  background-position: center;
+  margin: 0 auto;
+  background-origin: inherit;
+  position: relative;
+  height: auto;
+ 
 }
 #__next > div > div > div:nth-child(2) > div > div.ui.large.inverted.pointing.secondary.menu
 {

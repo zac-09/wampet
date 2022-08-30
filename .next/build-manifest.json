@@ -18,6 +18,10 @@
     "/election/candidate_list": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/election/company_dashboard": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
