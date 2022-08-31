@@ -69,43 +69,53 @@ class DividerExampleVerticalForm extends Component {
       var http = new XMLHttpRequest();
       var url = "company/authenticate";
       var params = "email=" + email + "&password=" + password;
+      let isAuthenticated = false;
       http.open("POST", url, true);
       //Send the proper header information along with the request
       http.setRequestHeader(
         "Content-type",
         "application/x-www-form-urlencoded"
       );
-      http.onreadystatechange = function() {
+      http.onreadystatechange = async function() {
         //Call a function when the state changes.
         if (http.readyState == 4 && http.status == 200) {
 		  var responseObj = JSON.parse(http.responseText);
 		  if(responseObj.status=="success") {
             Cookies.set('company_id', encodeURI(responseObj.data.id));
             Cookies.set('company_email', encodeURI(responseObj.data.email)); 
+            isAuthenticated = true;
+            console.log("set auth",isAuthenticated)
+            try {
+              const accounts = await web3.eth.getAccounts();
+              console.log(accounts[0]);
+              const summary = await Election_Factory.methods.getDeployedElection(email).call({from: accounts[0]});
+              console.log(summary);
+              if(summary[2] == "Create an election.") {            
+                  Router.pushRoute(`/election/create_election`);
+              }
+              else {           
+                  Cookies.set('address',summary[0]);
+                  Router.pushRoute(`/election/${summary[0]}/company_dashboard`);
+              }
+          }
+          catch (err) {
+              console.log("login error",err);
+          }
+
 		  }
 		  else {
 			alert(responseObj.message);
+      return;
 		  }
           
         }
       };
       http.send(params); 
-      try {
-        const accounts = await web3.eth.getAccounts();
-        console.log(accounts[0]);
-        const summary = await Election_Factory.methods.getDeployedElection(this.state.email).call({from: accounts[0]});
-        console.log(summary);
-        if(summary[2] == "Create an election.") {            
-            Router.pushRoute(`/election/create_election`);
-        }
-        else {           
-            Cookies.set('address',summary[0]);
-            Router.pushRoute(`/election/${summary[0]}/company_dashboard`);
-        }
-    }
-    catch (err) {
-        console.log("login error",err);
-    }
+      console.log("isAuthenticated: " + isAuthenticated);
+      if(!isAuthenticated) {
+        return;
+      }
+      
   }
 
   render() {

@@ -15,12 +15,16 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/election/candidate_list": [
+    "/election/company_dashboard": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/election/company_dashboard": [
+
+    "/homepage": [
       "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",;
+      "static/chunks/styles.js",
+
       "static/runtime/main.js"
     ]
   }

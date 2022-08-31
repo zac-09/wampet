@@ -40,12 +40,12 @@ module.exports = {
                 if(!CompanyInfo){
                     res.json({status: "error", message: "Admin not found", data:null});
                 }
-                if(CompanyInfo && bcrypt.compareSync(req.body.password, CompanyInfo.password) && CompanyInfo.email == req.body.email) {
+               else if(CompanyInfo && bcrypt.compareSync(req.body.password, CompanyInfo.password) && CompanyInfo.email == req.body.email) {
                     
                     res.json({status:"success", message: "Admin found!!!", data:{id: CompanyInfo._id, email: CompanyInfo.email}});
                 }
                 else {
-                    return res.json({status:"error", message: "Invalid email/password!!!", data:null});
+                     res.json({status:"error", message: "Invalid email/password!!!", data:null});
                 }
             }
         });
