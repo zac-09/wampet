@@ -24,7 +24,7 @@ class DividerExampleVerticalForm extends Component {
             width:100vw;
             height:100vh;
             position:absolute; 
-            background: url('../../static/blockchain.jpg') no-repeat;
+            background: url('../../static/back.jpg') no-repeat;
             z-index: -1;
         }
       `}</style>

@@ -41,7 +41,7 @@ class LoginForm extends Component {
                     width:100%;
                     height:100%;
                     position:absolute;
-                    background: url('../../static/blockchain.jpg') no-repeat;
+                    background: url('../../static/back.jpg') no-repeat;
                 } 
               `}</style>
 
