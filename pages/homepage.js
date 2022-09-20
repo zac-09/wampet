@@ -185,7 +185,7 @@ const HomepageLayout = () => (
 					Mbarara University Ethereum blockchain Voting system
 				</Header>
 				<p style={{ fontSize: '1.33em', textAlign: 'center', fontStyle: 'Italic' }}>
-					"A final year Decentralized blockchain voting system  for Mbarara University "
+					"A final year Decentralized blockchain voting system by <br/> Omoding Wycliff and Abaasa Racheal for Mbarara University "
 				</p>
 				<Header as="h2" style={{ fontSize: '1.33em', color: 'white', textAlign: 'center' }}>
 						</Header>
