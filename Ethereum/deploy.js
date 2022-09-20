@@ -3,6 +3,8 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const eF = require('./Build/ElectionFact.json');
 
+//This is a rinkbey infura wallet that we are using, we indicate the recovery tokens(which is a way to sign in into metamask)
+//It is linked to an infura account
 const provider = new HDWalletProvider(
 	'dune move today rapid path adjust ordinary execute dove myth mom snow',
 	'https://rinkeby.infura.io/v3/8acfcfdd6ebe4d558123ca69fa46dd31'

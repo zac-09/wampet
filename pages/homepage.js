@@ -22,7 +22,7 @@ const HomepageHeading = ({ mobile }) => (
 	<Container text className="cont">
 		<Header
 			as="h1"
-			content="A blockchain Based Voting System For Makerere University"
+			content="A blockchain Based Voting System For Mbarara University"
 			inverted
 			style={{
 				fontSize: mobile ? '2em' : '3em',
@@ -34,7 +34,7 @@ const HomepageHeading = ({ mobile }) => (
 		/>
 		<Header
 			as="h4"
-			content="We build for the future"
+			content="Success we must"
 			inverted
 			style={{
 				fontSize: mobile ? '1.5em' : '1.7em',
@@ -48,7 +48,7 @@ const HomepageHeading = ({ mobile }) => (
 				Sign in as Admin
 			</Header>
 			<Link route="./company_login">
-				<Button primary size="huge" style={{ color: 'white', backgroundColor: '#23A74C' }}>
+				<Button primary size="huge" style={{ color: 'white', backgroundColor: '#063586' }}>
 					<Icon name="left arrow" />
 					Admin
 				</Button>
@@ -61,7 +61,7 @@ const HomepageHeading = ({ mobile }) => (
 				Sign in to vote
 			</Header>
 			<Link route="/voter_login">
-				<Button primary size="huge" style={{ color: 'white', backgroundColor: '#23A74C' }}>
+				<Button primary size="huge" style={{ color: 'white', backgroundColor: '#063586' }}>
 					Voters
 					<Icon name="right arrow" />
 				</Button>
@@ -89,7 +89,7 @@ class DesktopContainer extends Component {
 				<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
 				<Helmet>
 					<title>HomePage</title>
-					<link rel="shortcut icon" type="image/x-icon" href="../../static/mak100.png" />
+					<link rel="shortcut icon" type="image/x-icon" href="../../static/masticon.jpeg" />
 				</Helmet>
 				<Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
 					<Segment inverted textAlign="center" style={{ minHeight: 700, padding: '1em 0em' }} vertical>
@@ -104,14 +104,14 @@ class DesktopContainer extends Component {
 							<Container>
 								<h1
 									style={{
-										color: '#23A74C',
+										color: '#063586',
 										verticalAlign: 'middle',
 										fontFamily: 'Freestyle Script',
 										fontSize: '400%',
 										paddingLeft: '42%',
 									}}
 								>
-									MakVotes
+									MustVotes
 								</h1>
 							</Container>
 						</Menu>
@@ -179,16 +179,16 @@ const HomepageLayout = () => (
 			</Grid>
 		</Segment>
 
-		<Segment inverted vertical style={{ padding: '5em 0em', backgroundColor: '#23A74C' }}>
+		<Segment inverted vertical style={{ padding: '5em 0em', backgroundColor: '#063586' }}>
 			<Container>
 				<Header as="h3" style={{ fontSize: '2em', color: 'white', textAlign: 'center' }}>
-					Makerere Ethereum blockchain Voting system
+					Mbarara University Ethereum blockchain Voting system
 				</Header>
 				<p style={{ fontSize: '1.33em', textAlign: 'center', fontStyle: 'Italic' }}>
-					"A final year Decentralized blockchain voting system by Ssempangi Andrew and Wamanga Peter for Makerere University "
+					"A final year Decentralized blockchain voting system  for Mbarara University "
 				</p>
 				<Header as="h2" style={{ fontSize: '1.33em', color: 'white', textAlign: 'center' }}>
-					Ssempangi Andrew and Wamanga Peter				</Header>
+						</Header>
 			</Container>
 		</Segment>
 	</ResponsiveContainer>

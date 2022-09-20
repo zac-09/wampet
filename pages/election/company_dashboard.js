@@ -246,7 +246,7 @@ class ContainerExampleContainer extends Component {
 			<div>
 				<Helmet>
 					<title>Dashboard</title>
-					<link rel="shortcut icon" type="image/x-icon" href="../../static/mak100.png
+					<link rel="shortcut icon" type="image/x-icon" href="../../static/masticon.jpeg
 					" />
 				</Helmet>
 				<Grid>

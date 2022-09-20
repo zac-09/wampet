@@ -49,7 +49,7 @@ contract Election {
         _;
     }
     //candidate election_description
-
+//S
     struct Candidate {
         string candidate_name;
         string candidate_description;
